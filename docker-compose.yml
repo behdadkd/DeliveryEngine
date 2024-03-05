@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  delayapi:
+    image: ${DOCKER_REGISTRY-}delayapi
+    build:
+      context: .
+      dockerfile: DelayApi/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:12345
+    ports:
+      - "12345:12345"

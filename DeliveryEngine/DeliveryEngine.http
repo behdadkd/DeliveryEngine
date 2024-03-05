@@ -1,0 +1,6 @@
+@DeliveryEngine_HostAddress = http://localhost:5104
+
+GET {{DeliveryEngine_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
